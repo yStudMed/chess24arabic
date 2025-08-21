@@ -1,0 +1,21 @@
+.drawer-wraper {
+    width: 20px;
+    height: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    & > div {
+        height: 2px;
+        background-color: #fff;
+        transition-property: background-color;
+        transition-duration: 0.4s;
+        transition-timing-function: ease;
+        &:last-child {
+            width: 67%;
+        }
+    }
+    &:hover > div {
+        background-color: #dd3333;
+    }
+}
