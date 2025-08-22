@@ -15,21 +15,21 @@ main {
     background-color: #fff;
 }
 
-header {
+:is(header, footer) {
     background-color: #1f2024;
     padding-inline: 15px;
-    display: flex;
     justify-content: space-between;
-    align-items: center;
     color: #fff;
 }
 
+header {
+    display: flex;
+    align-items: center;
+    position: sticky;
+}
+
 footer {
-    background-color: #1f2024;
-    padding-inline: 15px;
-    justify-content: space-between;
     align-content: center;
-    color: #fff;
     font-size: 14px;
     & > * {
         display: flex;

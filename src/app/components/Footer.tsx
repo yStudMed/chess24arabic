@@ -7,7 +7,7 @@ export default function Footer() {
                 الحقوق محفوظة © Chess24Arabic
             </p>
             <ul>
-                <li><Link href={"#"}>من نحن</Link></li>
+                <li><Link href="about-us">من نحن</Link></li>
                 <li><Link href={"#"}>عن المطور</Link></li>
             </ul>
         </footer>

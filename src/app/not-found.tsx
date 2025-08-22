@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import styles from "./not-found.module.css"
 import Header from './components/Header'
 import Container from './components/Container'
