@@ -18,8 +18,33 @@ main {
 header {
     background-color: #1f2024;
     padding-inline: 15px;
-    height: 75px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    color: #fff;
+}
+
+footer {
+    background-color: #1f2024;
+    padding-inline: 15px;
+    justify-content: space-between;
+    align-content: center;
+    color: #fff;
+    font-size: 14px;
+    & > * {
+        display: flex;
+        justify-content: center;
+        &:is(ul) {
+            & > li {
+                margin-left: 12px;
+                list-style-type: none;
+                & > a {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    & a {
+        color: inherit;
+    }
 }
