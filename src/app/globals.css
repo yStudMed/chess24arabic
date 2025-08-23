@@ -25,6 +25,7 @@ main {
 header {
     display: flex;
     align-items: center;
+    position: -webkit-sticky;
     position: sticky;
 }
 
@@ -40,6 +41,9 @@ footer {
                 list-style-type: none;
                 & > a {
                     text-decoration: none;
+                    &:hover {
+                        color: #dd3333;
+                    };
                 }
             }
         }

@@ -8,7 +8,7 @@ export default function Footer() {
             </p>
             <ul>
                 <li><Link href="about-us">من نحن</Link></li>
-                <li><Link href={"#"}>عن المطور</Link></li>
+                <li><Link href={"team"}>فريق العمل</Link></li>
             </ul>
         </footer>
     );

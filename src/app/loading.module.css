@@ -1,0 +1,38 @@
+@-webkit-keyframes spinner {
+    from {
+        transform: rotateZ(0deg);
+    }
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+
+@keyframes spinner {
+    from {
+        transform: rotateZ(0deg);
+    }
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+
+.container {
+    height: 100vh;
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & > .spinner {
+        height: 50px;
+        width: 50px;
+        border: 5px solid;
+        border-color: transparent #1f2024 #1f2024;
+        border-radius: 50%;
+        -webkit-animation-name: spinner;
+                animation-name: spinner;
+        -webkit-animation-duration: 2s;
+                animation-duration: 2s;
+        -webkit-animation-timing-function: linear;
+                animation-timing-function: linear;
+    }
+}
