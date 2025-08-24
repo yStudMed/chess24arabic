@@ -1,4 +1,38 @@
 .container {
     display: grid;
     grid-template-rows: 75px 1fr 104px;
+    & > article {
+        margin-block: 24px;
+        & .team-member {
+            display: flex;
+            margin-right: 50px;
+            margin-block: 24px;
+            align-items: center;
+            & > .image-container {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                & > .img {
+                    border-radius: 50%;
+                    margin-bottom: 8px;
+                }
+                & > P {
+                    margin-block: 0;
+                    font-size: 18px;
+                }
+            }
+            & > :not(:last-child) {
+                margin-left: 24px;
+            }
+            & > .contact-email {
+                color: #e84937;
+                font-size: 20px;
+                text-decoration: none;
+                &:hover {
+                    color: #b61705;
+                }
+            };
+        }
+    }
 }
