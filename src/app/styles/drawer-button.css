@@ -18,4 +18,9 @@
     &:hover > div {
         background-color: #dd3333;
     }
+    @media screen and (min-width: 1281px) {
+        & {
+            display: none;
+        }
+    }
 }

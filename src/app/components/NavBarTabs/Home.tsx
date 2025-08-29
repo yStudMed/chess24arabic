@@ -1,0 +1,14 @@
+type HomeProps = {
+    className: string;
+};
+
+export default function Home({ className }: HomeProps) {
+    return (
+        <div className={className}>
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" id="home">
+                <path fill="#fff" d="M20 40V28h8v12h10V24h6L24 6 4 24h6v16z"></path>
+                <path fill="none" d="M0 0h48v48H0z"></path>
+            </svg>
+        </div>
+    );
+};

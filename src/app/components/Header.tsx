@@ -1,13 +1,13 @@
 import Drawer from "./Drawer";
 import Logo from "./Logo";
-import SearchIcon from "./SearchIcon";
+import NavbarTabs from "./NavBarTabs/NavbarTabs";
 
 export default function Header() {
     return (
         <header>
             <Drawer/>
             <Logo/>
-            <SearchIcon/>
+            <NavbarTabs/>
         </header>
     );
 };

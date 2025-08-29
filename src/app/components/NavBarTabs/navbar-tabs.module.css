@@ -1,0 +1,41 @@
+.navbar-list {
+    height: 100%;
+    display: none;
+    align-items: center;
+    list-style-type: none;
+    @media screen and (min-width: 1281px) {
+        & {
+            display: flex;
+        }
+    }
+    & > li {
+        cursor: pointer;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        &:not(:first-child) {
+            margin-right: 12px;
+        }
+        &:hover {
+            background-color: #e84937;
+        }
+        & > div {
+            display: flex;
+            align-items: center;
+            &:not(&.home-tab) {
+                margin-top: 4px;
+                padding-inline: 8px;
+                & > svg {
+                    margin-left: 8px;
+                }
+                & > span {
+                    font-size: 18px;
+                    margin-top: 4px;
+                }
+            }
+            &.home-tab {
+                padding-inline: 16px;
+            }
+        }
+    }
+}

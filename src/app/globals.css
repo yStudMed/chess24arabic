@@ -1,6 +1,9 @@
 * {
     box-sizing: border-box;
     direction: rtl;
+    &::selection {
+        background-color: #e84b39;
+    }
 }
 
 body {
@@ -15,7 +18,7 @@ main {
     background-color: #fff;
 }
 
-:is(header, footer) {
+:where(header, footer) {
     background-color: #1f2024;
     padding-inline: 15px;
     justify-content: space-between;
@@ -27,6 +30,11 @@ header {
     align-items: center;
     position: -webkit-sticky;
     position: sticky;
+    @media screen and (min-width: 1281px) {
+        & {
+            justify-content: flex-start;
+        };
+    };
 }
 
 footer {

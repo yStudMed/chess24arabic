@@ -5,6 +5,7 @@
         margin-block: 24px;
         & .team-member {
             display: flex;
+            flex-wrap: wrap;
             margin-right: 50px;
             margin-block: 24px;
             align-items: center;
