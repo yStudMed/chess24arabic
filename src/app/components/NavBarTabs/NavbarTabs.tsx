@@ -2,22 +2,35 @@ import Home from "./Home";
 import News from "./News";
 import Results from "./Results";
 import Tournaments from "./Tournaments";
+import CloseDrawer from "../CloseDrawer";
 import styles from "./navbar-tabs.module.css";
+import Link from "next/link";
 
 export default function NavbarTabs() {
     return (
         <ul className={styles["navbar-list"]}>
-            <li>
-                <Home className={styles["home-tab"]}/>
+            <li className={styles.close}>
+                <CloseDrawer/>
             </li>
             <li>
-                <News/>
+                <Link href="#">
+                    <Home className={styles["home-tab"]} />
+                </Link>
             </li>
             <li>
-                <Results/>
+                <Link href="#">
+                    <News />
+                </Link>
             </li>
             <li>
-                <Tournaments/>
+                <Link href="#">
+                    <Results />
+                </Link>
+            </li>
+            <li>
+                <Link href="#">
+                    <Tournaments />
+                </Link>
             </li>
         </ul>
     );

@@ -3,6 +3,7 @@
     direction: rtl;
     &::selection {
         background-color: #e84b39;
+        color: #fff;
     }
 }
 

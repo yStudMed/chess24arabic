@@ -1,11 +1,11 @@
-import Drawer from "./Drawer";
+import OpenDrawerButton from "./OpenDrawerButton";
 import Logo from "./Logo";
 import NavbarTabs from "./NavBarTabs/NavbarTabs";
 
 export default function Header() {
     return (
         <header>
-            <Drawer/>
+            <OpenDrawerButton/>
             <Logo/>
             <NavbarTabs/>
         </header>
