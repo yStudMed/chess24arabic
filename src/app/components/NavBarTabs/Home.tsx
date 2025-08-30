@@ -9,6 +9,7 @@ export default function Home({ className }: HomeProps) {
                 <path fill="#fff" d="M20 40V28h8v12h10V24h6L24 6 4 24h6v16z"></path>
                 <path fill="none" d="M0 0h48v48H0z"></path>
             </svg>
+            <span>الرئيسية</span>
         </div>
     );
 };
