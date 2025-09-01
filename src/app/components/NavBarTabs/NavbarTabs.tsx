@@ -3,6 +3,7 @@ import News from "./News";
 import Results from "./Results";
 import Tournaments from "./Tournaments";
 import CloseDrawer from "../CloseDrawer";
+import TopPlayers from "./TopPlayers";
 import styles from "./navbar-tabs.module.css";
 import Link from "next/link";
 
@@ -13,7 +14,7 @@ export default function NavbarTabs() {
                 <CloseDrawer/>
             </li>
             <li>
-                <Link href="#">
+                <Link href="/">
                     <Home className={styles["home-tab"]} />
                 </Link>
             </li>
@@ -30,6 +31,11 @@ export default function NavbarTabs() {
             <li>
                 <Link href="#">
                     <Tournaments />
+                </Link>
+            </li>
+            <li>
+                <Link href="#">
+                    <TopPlayers />
                 </Link>
             </li>
         </ul>

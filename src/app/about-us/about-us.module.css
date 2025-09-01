@@ -1,12 +1,10 @@
 .container {
-    display: grid;
-    grid-template-rows: 75px 1fr 104px;
     & > article {
         display: flex;
         justify-content: center;
         & > section {
             width: 80%;
-        };
+        }
     }
     & h1 {
         font-size: 32px;

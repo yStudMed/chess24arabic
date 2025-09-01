@@ -27,6 +27,7 @@ main {
 }
 
 header {
+    height: 75px;
     display: flex;
     align-items: center;
     position: -webkit-sticky;
@@ -41,6 +42,7 @@ header {
 footer {
     align-content: center;
     font-size: 14px;
+    height: 104px;
     & > * {
         display: flex;
         justify-content: center;

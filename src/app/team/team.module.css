@@ -1,6 +1,4 @@
 .container {
-    display: grid;
-    grid-template-rows: 75px 1fr 104px;
     & > article {
         margin-block: 24px;
         & .team-member {
@@ -33,7 +31,7 @@
                 &:hover {
                     color: #b61705;
                 }
-            };
+            }
         }
     }
 }
