@@ -1,10 +1,21 @@
 * {
     box-sizing: border-box;
     direction: rtl;
+    &::-moz-selection {
+        background-color: #e84b39;
+        color: #fff;
+    }
     &::selection {
         background-color: #e84b39;
         color: #fff;
     }
+}
+
+img {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
 }
 
 body {
@@ -32,11 +43,12 @@ header {
     align-items: center;
     position: -webkit-sticky;
     position: sticky;
+    top: 0;
     @media screen and (min-width: 1281px) {
         & {
             justify-content: flex-start;
-        };
-    };
+        }
+    }
 }
 
 footer {
@@ -52,9 +64,11 @@ footer {
                 list-style-type: none;
                 & > a {
                     text-decoration: none;
-                    &:hover {
-                        color: #dd3333;
-                    };
+                    @media (hover: hover) {
+                        &:hover {
+                            color: #dd3333;
+                        }
+                    }
                 }
             }
         }

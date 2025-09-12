@@ -1,3 +1,4 @@
+import Tab from "./Tab";
 import Home from "./Home";
 import News from "./News";
 import Results from "./Results";
@@ -5,39 +6,18 @@ import Tournaments from "./Tournaments";
 import CloseDrawer from "../CloseDrawer";
 import TopPlayers from "./TopPlayers";
 import styles from "./navbar-tabs.module.css";
-import Link from "next/link";
 
 export default function NavbarTabs() {
     return (
         <ul className={styles["navbar-list"]}>
-            <li className={styles.close}>
+            <li key="closeDrawer" className={styles.close}>
                 <CloseDrawer/>
             </li>
-            <li>
-                <Link href="/">
-                    <Home className={styles["home-tab"]} />
-                </Link>
-            </li>
-            <li>
-                <Link href="#">
-                    <News />
-                </Link>
-            </li>
-            <li>
-                <Link href="#">
-                    <Results />
-                </Link>
-            </li>
-            <li>
-                <Link href="#">
-                    <Tournaments />
-                </Link>
-            </li>
-            <li>
-                <Link href="#">
-                    <TopPlayers />
-                </Link>
-            </li>
+            <Tab activeClassName={styles.active} href="/" component={<Home className={styles["home-tab"]} />} />
+            <Tab activeClassName={styles.active} href="/news" component={<News/>} />
+            <Tab activeClassName={styles.active} href="/results" component={<Results/>} />
+            <Tab activeClassName={styles.active} href="/tournaments" component={<Tournaments/>} />
+            <Tab activeClassName={styles.active} href="/top-players" component={<TopPlayers/>} />
         </ul>
     );
 };
