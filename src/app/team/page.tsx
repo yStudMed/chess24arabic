@@ -1,3 +1,10 @@
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+    title: 'فريق العمل',
+};
+
+
 import styles from "./team.module.css"
 import Image from "next/image";
 
