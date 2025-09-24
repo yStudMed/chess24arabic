@@ -109,7 +109,7 @@ pool.query(`
     fide_id = EXCLUDED.fide_id
     ;
 `).then(() => {
-    console.log("Insertion Done");
+    console.log("Players Insertion Done");
 }).catch((err) => {
     console.error(err);
 }).finally(() => {

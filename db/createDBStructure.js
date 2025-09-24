@@ -15,8 +15,7 @@ pool.query(`
         image_url VARCHAR(1024) NOT NULL
     );
     CREATE TABLE tournaments (
-        id SERIAL PRIMARY KEY,
-        tournament_fide_id INTEGER UNIQUE,
+        id VARCHAR(12) UNIQUE NOT NULL,
         slug VARCHAR(1024) NOT NULL,
         start_date TIMESTAMPTZ NOT NULL,
         end_date TIMESTAMPTZ NOT NULL,
