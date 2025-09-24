@@ -1,7 +1,5 @@
 .container {
-    height: 95vh;
-    display: grid;
-    grid-template-rows: 75px 3fr 2fr 1fr 104px;
+    height: 50vh;
 }
 
 .response-not-found-statis-code {
