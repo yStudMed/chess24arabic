@@ -1,12 +1,9 @@
 import pg from "pg";
+import '../envConfig.js';
+import { dbPoolConfigOptions } from "../lib/dbPoolConfigOptions.js"
 //
-const pool = new pg.Pool({
-    host: 'localhost',
-    port: 5432,
-    user: "postgres",
-    database: "chess24",
-    password: 'qqa'
-});
+
+const pool = new pg.Pool(dbPoolConfigOptions);
 
 //
 pool.query(`
@@ -16,10 +13,12 @@ pool.query(`
     );
     CREATE TABLE tournaments (
         id VARCHAR(12) UNIQUE NOT NULL,
-        slug VARCHAR(1024) NOT NULL,
+        name VARCHAR(512) NOT NULL,
         start_date TIMESTAMPTZ NOT NULL,
         end_date TIMESTAMPTZ NOT NULL,
-        api_provider VARCHAR(12) NOT NULL
+        image_url VARCHAR(1024) NOT NULL,
+        slug VARCHAR(512),
+        CHECK (start_date < end_date)
     );
 `).then(() => {
     console.log("Tables Creation Done");

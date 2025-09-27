@@ -11,6 +11,12 @@
     }
 }
 
+:where(ul) {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
 img {
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -28,6 +34,38 @@ main {
     box-shadow: 0 1px 7px rgba(171, 171, 171, .5);
     margin: auto;
     background-color: #fff;
+    & > .content {
+        margin-inline: 12px;
+        margin-block: 18px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        gap: 12px;
+        & > .ads {
+            width: 400px;
+            margin: auto;
+            background-color: aqua;
+        }
+        & > article {
+            background-color: blue;
+            height: fit-content;
+        }
+        @media all and (min-width: 540px) {
+            & {
+                margin-inline: 16px;
+            }
+        }
+        @media screen and (min-width: 960px) {
+            & {
+                grid-template-columns: 1fr 300px;
+                grid-template-rows: 1fr;
+                & > .ads {
+                    width: 300px;
+                    margin: revert;
+                }
+            }
+        }
+    }
 }
 
 :where(header, footer) {

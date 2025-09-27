@@ -1,12 +1,8 @@
 import pg from "pg";
+import '../envConfig.js';
+import { dbPoolConfigOptions } from "../lib/dbPoolConfigOptions.js"
 //
-const pool = new pg.Pool({
-    host: 'localhost',
-    port: 5432,
-    user: "postgres",
-    database: "chess24",
-    password: 'qqa'
-});
+const pool = new pg.Pool(dbPoolConfigOptions);
 
 //
 pool.query(`

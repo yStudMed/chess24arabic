@@ -20,7 +20,15 @@ export default function RootLayout({
       <body>
         <Container>
           <Header/>
-            {children}
+          <div className="content">
+            <div className="page-container">
+              <section className="upper-ad"></section>
+              <section>
+                {children}
+              </section>
+            </div>
+            <div className="ads"></div>
+          </div>
           <Footer/>
         </Container>
       </body>
